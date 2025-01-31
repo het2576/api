@@ -3,6 +3,8 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Disable GPU
 
 # Load the trained model
 model = tf.keras.models.load_model('trained_model.h5')
